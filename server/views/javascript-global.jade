@@ -1,0 +1,13 @@
+extends layout
+
+block body
+  div
+    h2 JavaScript Global
+    ul(ng-controller="JavaScriptGlobalCtrl")
+      li(ng-repeat="user in users") {{ user.name }} {{ user.email }}
+
+  script.
+    var userList = !{JSON.stringify(users)};
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
+  script(src='/js/core.js')
+

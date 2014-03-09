@@ -1,0 +1,11 @@
+extends layout
+
+block body
+  div
+    h2 Angular's ng-init
+    ul(ng-init="users=#{JSON.stringify(users)}")
+      li(ng-repeat="user in users") {{ user.name }} {{ user.email }}
+
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js')
+  script(src='/js/core.js')
+
